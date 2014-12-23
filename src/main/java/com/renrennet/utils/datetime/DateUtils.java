@@ -1,4 +1,4 @@
-package com.renrennet.utils;
+package com.renrennet.utils.datetime;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

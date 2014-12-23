@@ -1,5 +1,6 @@
 package com.renrennet.utils;
 
+import com.renrennet.utils.datetime.DateUtils;
 import org.junit.Test;
 
 /**
