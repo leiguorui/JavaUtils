@@ -94,4 +94,15 @@ public class DateUtils {
         String time = String.format("%02d:%02d:%02d", hour, minute, second);
         return time;
     }
+
+    /**
+     * 当前时间往后几天的日期，days为负值表示往前数几天
+     * @param days
+     * @return
+     */
+    public static Date addDaysToCurrent(int days){
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, days);
+        return cal.getTime();
+    }
 }

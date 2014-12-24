@@ -10,5 +10,6 @@ public class DateUtilsTest {
     @Test
     public void test(){
         System.out.println(DateUtils.getLastTime(18720000));
+        System.out.println(DateUtils.addDaysToCurrent(10));
     }
 }
