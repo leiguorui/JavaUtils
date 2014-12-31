@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Created by leiguorui on 9/26/14.
  *
- * 时间转换工具类
+ * 时间获取
  */
 public class DateUtils {
     /**
@@ -79,30 +79,5 @@ public class DateUtils {
      */
     public static int getYearNumber(){
         return Calendar.getInstance().get(Calendar.YEAR);
-    }
-
-    /**
-     * 获取持续时间
-     * @param millis
-     * @return
-     */
-    public static String getLastTime(long millis){
-        long second = (millis / 1000) % 60;
-        long minute = (millis / (1000 * 60)) % 60;
-        long hour = (millis / (1000 * 60 * 60)) % 24;
-
-        String time = String.format("%02d:%02d:%02d", hour, minute, second);
-        return time;
-    }
-
-    /**
-     * 当前时间往后几天的日期，days为负值表示往前数几天
-     * @param days
-     * @return
-     */
-    public static Date addDaysToCurrent(int days){
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, days);
-        return cal.getTime();
     }
 }
