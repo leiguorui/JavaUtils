@@ -1,4 +1,4 @@
-package com.renrennet.utils;
+package com.renrennet.utils.security;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

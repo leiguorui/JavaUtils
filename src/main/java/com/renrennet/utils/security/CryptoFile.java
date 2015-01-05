@@ -1,4 +1,4 @@
-package com.renrennet.utils.file;
+package com.renrennet.utils.security;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,7 +19,7 @@ import javax.crypto.spec.SecretKeySpec;
  *
  * 文件的加密和解密
  */
-public class EncryptionAndDecryption {
+public class CryptoFile {
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES";
 
@@ -61,16 +61,20 @@ public class EncryptionAndDecryption {
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD:src/main/java/com/renrennet/utils/file/EncryptionAndDecryption.java
 <<<<<<< HEAD
 =======
         //这里的key为15位
 >>>>>>> 文件的加密与解密
+=======
+        //这里的key为15位
+>>>>>>> 文件的加密与解密:src/main/java/com/renrennet/utils/security/CryptoFile.java
         String key = "0123456789abcdef";
         File inputFile = new File("/home/leiguorui/repos.txt");
         File encryptedFile = new File("document.encrypted");
         File decryptedFile = new File("document.decrypted");
 
-        EncryptionAndDecryption.encrypt(key, inputFile, encryptedFile);
-        EncryptionAndDecryption.decrypt(key, encryptedFile, decryptedFile);
+        CryptoFile.encrypt(key, inputFile, encryptedFile);
+        CryptoFile.decrypt(key, encryptedFile, decryptedFile);
     }
 }

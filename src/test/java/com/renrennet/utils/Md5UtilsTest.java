@@ -1,5 +1,6 @@
 package com.renrennet.utils;
 
+import com.renrennet.utils.security.Md5Utils;
 import org.junit.Test;
 
 /**
