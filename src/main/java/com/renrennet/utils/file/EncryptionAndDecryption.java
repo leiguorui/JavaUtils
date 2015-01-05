@@ -61,6 +61,10 @@ public class EncryptionAndDecryption {
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
+=======
+        //这里的key为15位
+>>>>>>> 文件的加密与解密
         String key = "0123456789abcdef";
         File inputFile = new File("/home/leiguorui/repos.txt");
         File encryptedFile = new File("document.encrypted");
