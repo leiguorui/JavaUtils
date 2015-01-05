@@ -27,7 +27,7 @@ public class HttpDownloadUtility {
         HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
         int responseCode = httpConn.getResponseCode();
 
-        // always check HTTP response code first
+        // 先检查HTTP response code
         if (responseCode == HttpURLConnection.HTTP_OK) {
             String fileName = "";
             String disposition = httpConn.getHeaderField("Content-Disposition");
@@ -35,14 +35,14 @@ public class HttpDownloadUtility {
             int contentLength = httpConn.getContentLength();
 
             if (disposition != null) {
-                // extracts file name from header field
+                // 从 http header 上提取文件名
                 int index = disposition.indexOf("filename=");
                 if (index > 0) {
                     fileName = disposition.substring(index + 10,
                             disposition.length() - 1);
                 }
             } else {
-                // extracts file name from URL
+                // 以 URL 命名
                 fileName = fileURL.substring(fileURL.lastIndexOf("/") + 1,
                         fileURL.length());
             }
@@ -52,11 +52,11 @@ public class HttpDownloadUtility {
             System.out.println("Content-Length = " + contentLength);
             System.out.println("fileName = " + fileName);
 
-            // opens input stream from the HTTP connection
+            // 从 HTTP connection 打开 input stream
             InputStream inputStream = httpConn.getInputStream();
             String saveFilePath = saveDir + File.separator + fileName;
 
-            // opens an output stream to save into file
+            // 打开 output stream， 保存输出流到文件
             FileOutputStream outputStream = new FileOutputStream(saveFilePath);
 
             int bytesRead = -1;
@@ -75,10 +75,21 @@ public class HttpDownloadUtility {
         httpConn.disconnect();
     }
 
+    /**
+     * 设置http代理
+     * @param trueOrFalse
+     */
+    public static void proxySet(String trueOrFalse){
+        System.getProperties().put("http.proxyHost", "localhost");
+        System.getProperties().put("http.proxyPort", "8087");
+        System.getProperties().put("http.proxySet", "true");
+    }
+
     public static void main(String[] args) {
-        String fileURL = "http://www.baidu.com";
-        String saveDir = "/home/leiguorui/dev";
+        String fileURL = "http://wsodprogrf.bbc.co.uk/zhongwen/simp/dps/2011/06/track1_110617_cd1_prog1_au_bb.mp3";
+        String saveDir = "/home/leiguorui/dev/音頻：35集系列節目《百年滄桑話中國》";
         try {
+            proxySet("true");
             HttpDownloadUtility.downloadFile(fileURL, saveDir);
         } catch (IOException ex) {
             ex.printStackTrace();
