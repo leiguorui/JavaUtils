@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * 时间获取
  */
-public class DateUtils {
+public class DateGetUtils {
     /**
      * 获取时间yyyy/MM/dd HH:mm:ss
      * @return
