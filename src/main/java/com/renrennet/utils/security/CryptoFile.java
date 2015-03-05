@@ -61,17 +61,12 @@ public class CryptoFile {
     }
 
     public static void main(String[] args) {
-<<<<<<< HEAD:src/main/java/com/renrennet/utils/file/EncryptionAndDecryption.java
-<<<<<<< HEAD
-=======
         //这里的key为15位
->>>>>>> 文件的加密与解密
-=======
-        //这里的key为15位
->>>>>>> 文件的加密与解密:src/main/java/com/renrennet/utils/security/CryptoFile.java
         String key = "0123456789abcdef";
         File inputFile = new File("/home/leiguorui/repos.txt");
+        //加密后的文件
         File encryptedFile = new File("document.encrypted");
+        //解密后的文件
         File decryptedFile = new File("document.decrypted");
 
         CryptoFile.encrypt(key, inputFile, encryptedFile);
