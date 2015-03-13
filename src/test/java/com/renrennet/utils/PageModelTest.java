@@ -1,5 +1,6 @@
 package com.renrennet.utils;
 
+import com.renrennet.utils.beans.PageModel;
 import org.junit.Test;
 
 import java.util.ArrayList;

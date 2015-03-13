@@ -1,5 +1,6 @@
 package com.renrennet.utils;
 
+import com.renrennet.utils.memcached.MemcachedUtil;
 import org.junit.Test;
 
 import javax.servlet.http.HttpServletRequest;

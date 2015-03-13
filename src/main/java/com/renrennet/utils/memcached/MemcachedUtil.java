@@ -1,4 +1,4 @@
-package com.renrennet.utils;
+package com.renrennet.utils.memcached;
 
 import com.sun.deploy.net.HttpRequest;
 import net.spy.memcached.MemcachedClient;

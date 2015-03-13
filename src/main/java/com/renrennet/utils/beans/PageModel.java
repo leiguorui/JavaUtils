@@ -1,4 +1,4 @@
-package com.renrennet.utils;
+package com.renrennet.utils.beans;
 
 import java.util.ArrayList;
 import java.util.List;
