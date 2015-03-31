@@ -8,3 +8,4 @@ JavaUtils 是一套Java编程中常用的工具类,具体如下:
 > * Md5Utils
 > * MemcachedUtil
 > * PageModel
+> * 简单的分词器
