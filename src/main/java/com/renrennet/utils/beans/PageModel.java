@@ -100,6 +100,11 @@ public class PageModel<E> {
     }
 
     public static void main(String[] args){
-
+        // 创建一个分页
+        PageModel pageModel=new PageModel();
+        pageModel.setPageNo(1);
+        pageModel.setPageSize(5);
+        pageModel.setTotalRecords(10);
+        pageModel.setList(new ArrayList<String>());
     }
 }
