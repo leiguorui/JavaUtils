@@ -14,17 +14,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * 导出list到excel
- * User: Administrator
+ * 导出list到excel，文件类型是.xlsx
+ * User: leiguorui
  * Date: 15-3-12
  * Time: 下午6:09
  */
 public class WriteExcel {
 
-    /**
-     * 导出excel，检查匹配度
-     * @param fileName
-     */
     public static void writeExcel(String fileName){
         List<UserModelForTest> listForWrite = new ArrayList<>();  //要写入excel的list
         for(int id = 0; id < 10 ; id++){
