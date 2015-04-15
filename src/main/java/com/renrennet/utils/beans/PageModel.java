@@ -100,6 +100,7 @@ public class PageModel<E> {
     }
 
     public static void main(String[] args){
+
         // 创建一个分页
         PageModel pageModel=new PageModel();
         pageModel.setPageNo(1);

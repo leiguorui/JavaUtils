@@ -1,4 +1,4 @@
-package com.renrennet.utils.file;
+package com.renrennet.utils.file.poi;
 
 import java.io.*;
 import java.util.Iterator;
@@ -41,7 +41,7 @@ public class ReadExcelFile {
                             break;
                     }
                 }
-                System.out.println("");
+                System.out.println("------------------------");
             }
             file.close();
         } catch (FileNotFoundException e) {
