@@ -1,4 +1,4 @@
-package com.renrennet.utils.file.poi;
+package com.renrennet.utils.io.file.poi;
 
 import com.renrennet.utils.beans.UserModelForTest;
 import org.apache.poi.ss.usermodel.Cell;
@@ -8,10 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * 导出list到excel，文件类型是.xlsx
@@ -49,9 +46,11 @@ public class WriteExcel {
 
         //Iterate over data and write to sheet
         int rownum = 0;
-        for (int key = 0 ; key < lineNo ; key++){
+        Iterator<Map.Entry<Integer, Object[]>> it = data.entrySet().iterator();
+        while(it.hasNext()){
+            Map.Entry<Integer, Object[]> entry=it.next();
             Row row = sheet.createRow(rownum++);
-            Object [] objArr = data.get(key);
+            Object[] objArr = entry.getValue();
             int cellnum = 0;
             for (Object obj : objArr){
                 Cell cell = row.createCell(cellnum++);

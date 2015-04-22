@@ -1,4 +1,4 @@
-package com.renrennet.utils.file;
+package com.renrennet.utils.io.file;
 
 import java.io.File;
 import java.io.FileOutputStream;
