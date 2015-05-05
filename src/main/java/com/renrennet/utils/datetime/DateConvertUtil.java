@@ -26,6 +26,25 @@ public class DateConvertUtil {
     }
 
     /**
+     * 获取某天的前monthNo个月的第一天和最后一天
+     * @param monthNo
+     * @param date
+     * @return
+     */
+    public static Date[] getPreviousMoth(int monthNo,Date date){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.add(Calendar.MONTH, monthNo);
+        cal.set(Calendar.DATE, 1);
+        Date firstDateOfPreviousMonth = cal.getTime();
+
+        cal.set(Calendar.DATE, cal.getActualMaximum(Calendar.DATE)); // changed calendar to cal
+
+        Date lastDateOfPreviousMonth = cal.getTime();
+        return new Date[]{firstDateOfPreviousMonth,lastDateOfPreviousMonth};
+    }
+
+    /**
      * 根据持续毫秒值，获取时分秒
      * @param millis
      * @return
@@ -167,5 +186,9 @@ public class DateConvertUtil {
             day = 31;
         }
         return day;
+    }
+
+    public static void main(String[] args){
+         System.out.println(DateConvertUtil.getPreviousMoth(-1, new Date())[1]);
     }
 }

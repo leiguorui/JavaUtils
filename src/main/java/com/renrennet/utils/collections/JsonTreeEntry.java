@@ -102,6 +102,7 @@ public class JsonTreeEntry {
         Gson g = new Gson();
 
         System.out.println(g.toJson(cultureNode));
+        //获取叶子节点的个数
         System.out.println(cultureNode.getLeafSize(cultureNode.getChildren()));
     }
 }
