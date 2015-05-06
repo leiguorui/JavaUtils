@@ -56,5 +56,13 @@
             <version>2.2.4</version>
         </dependency>
         <!-- // json工具-->
+
+        <!--时间工具-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <!--  // 时间工具 -->
     </dependencies>
 </project>
