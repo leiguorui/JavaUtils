@@ -16,6 +16,7 @@ public class PropertiesRead {
     private static Properties prop = new Properties();
     InputStream input = null;
 
+    // 在构造函数中读取文件
     protected PropertiesRead() {
         try {
             input = PropertiesRead.class.getResourceAsStream("/paramter.properties");
@@ -32,7 +33,6 @@ public class PropertiesRead {
                 }
             }
         }
-        // Exists only to defeat instantiation.
     }
 
     public static PropertiesRead getInstance() {
@@ -46,7 +46,7 @@ public class PropertiesRead {
 
         String value = null;
 
-        // get the property value and print it out
+        // get the property value
         value = prop.getProperty(key);
 
         return value;
