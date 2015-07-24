@@ -1,6 +1,7 @@
 package com.renrennet.utils.redis;
 
 import com.renrennet.utils.io.SerializeUtil;
+import com.renrennet.utils.io.file.PropertiesRead;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -21,7 +22,7 @@ public class RedisUtils {
     private static RedisUtils uniqueInstance = null;
 
     //TODO 此处应该优化连接池
-    JedisPool pool = new JedisPool(new JedisPoolConfig(), "10.0.0.28");
+    JedisPool pool = new JedisPool(new JedisPoolConfig(), PropertiesRead.getInstance().getValue("redis.host"));
     Jedis jedis = pool.getResource();
 
     private RedisUtils() {
