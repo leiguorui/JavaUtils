@@ -64,5 +64,28 @@
             <version>2.7</version>
         </dependency>
         <!--  // 时间工具 -->
+
+        <!--集合类操作工具-->
+        <dependency>
+            <groupId>com.googlecode.lambdaj</groupId>
+            <artifactId>lambdaj</artifactId>
+            <version>2.3.3</version>
+        </dependency>
+        <!-- // 集合类操作工具-->
     </dependencies>
+
+    <build>
+        <plugins>
+            <!--设置项目的编译环境为JDK1.7-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
