@@ -24,3 +24,7 @@ JavaUtils 是一套Java编程中常用的工具类,具体如下:
 > * 文件路径的读取
 > * 单例读取properties配置文件
 
+#### Java集合框架
+
+> * lambdaj (对集合排序、查找、转换，方便代码阅读) ，中文教程：http://www.cnblogs.com/jcli/archive/2013/01/09/2851906.html
+
