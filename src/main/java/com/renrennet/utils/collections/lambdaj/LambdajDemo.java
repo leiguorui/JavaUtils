@@ -97,7 +97,6 @@ public class LambdajDemo {
         System.out.println("groupAgeKeys: "+groupAgeKeys);
         System.out.println("groupOfAge: "+groupAgeOfPerson.find(22));
 
-
         for (String ageKey : groupAgeKeys)
             for (Person person : groupAgeOfPerson.find(ageKey))
                 System.out.println(person.getDetails());
