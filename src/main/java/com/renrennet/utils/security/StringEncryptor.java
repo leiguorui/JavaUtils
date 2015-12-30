@@ -12,8 +12,15 @@ import java.security.Key;
  *
  * Created by lei on 15-12-30.
  */
-public class Encryptor {
+public class StringEncryptor {
 
+    /**
+     * 加密
+     * @param key
+     * @param initVector
+     * @param value
+     * @return
+     */
     public static String encrypt(String key, String initVector, String value) {
         try {
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
@@ -34,6 +41,13 @@ public class Encryptor {
         return null;
     }
 
+    /**
+     * 解密
+     * @param key
+     * @param initVector
+     * @param encrypted
+     * @return
+     */
     public static String decrypt(String key, String initVector, String encrypted) {
         try {
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
