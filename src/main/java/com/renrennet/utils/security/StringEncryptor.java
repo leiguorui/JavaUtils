@@ -8,7 +8,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;
 
 /**
- * 字符串加密工具
+ * 字符串加密工具(用于url的参数加密)
  *
  * Created by lei on 15-12-30.
  */
@@ -31,9 +31,9 @@ public class StringEncryptor {
 
             byte[] encrypted = cipher.doFinal(value.getBytes());
             System.out.println("encrypted string: "
-                    + Base64.encodeBase64String(encrypted));
+                    + Base64.encodeBase64URLSafeString(encrypted));
 
-            return Base64.encodeBase64String(encrypted);
+            return Base64.encodeBase64URLSafeString(encrypted);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -71,7 +71,7 @@ public class StringEncryptor {
         String initVector = "RandomInitVector"; // 16 bytes IV
 
         System.out.println(decrypt(key, initVector,
-                encrypt(key, initVector, "Hello World")));
+                encrypt(key, initVector, "1")));
     }
 
 }
