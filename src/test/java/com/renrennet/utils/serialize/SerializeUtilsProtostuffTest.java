@@ -2,6 +2,7 @@ package com.renrennet.utils.serialize;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.renrennet.utils.beans.PageModel;
 import com.renrennet.utils.io.gson.BooleanAsIntAdapter;
 import com.renrennet.utils.io.serialize.SerializeUtil;
 import com.renrennet.utils.io.serialize.protostuff.SerializeUtilsProtostuff;
@@ -18,5 +19,8 @@ public class SerializeUtilsProtostuffTest {
     public void booleanAsInt(){
         System.out.println(SerializeUtilsProtostuff.serialize("asdf").length);
         System.out.println(SerializeUtil.serialize("asdf").length);
+
+        System.out.println(SerializeUtilsProtostuff.serialize(new PageModel()).length);
+        System.out.println(SerializeUtil.serialize(new PageModel()).length);
     }
 }
