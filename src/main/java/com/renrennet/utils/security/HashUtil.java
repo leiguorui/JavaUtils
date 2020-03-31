@@ -1,9 +1,11 @@
-package com.renrennet.utils.math;
+package com.renrennet.utils.security;
 
 import com.google.common.base.Charsets;
 import com.google.common.hash.Hashing;
 
 /**
+ * 哈希工具， 一致性哈希
+ *
  * @Auther: leiguorui
  * @Date: 2020/3/25 12:23
  * @Description:
