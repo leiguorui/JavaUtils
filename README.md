@@ -12,6 +12,7 @@ JavaUtils 是一套Java编程中常用的工具类,具体如下:
 
 > * Md5Utils
 > * CryptoFile 文件的加密、解密
+> * HashUtil 一致性哈希
 
 #### 缓存、内存数据库的读写
 
