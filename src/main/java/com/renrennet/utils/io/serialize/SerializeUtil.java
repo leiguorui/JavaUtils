@@ -1,4 +1,4 @@
-package com.renrennet.utils.io;
+package com.renrennet.utils.io.serialize;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

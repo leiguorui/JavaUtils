@@ -1,6 +1,6 @@
 package com.renrennet.utils.redis;
 
-import com.renrennet.utils.io.SerializeUtil;
+import com.renrennet.utils.io.serialize.SerializeUtil;
 import com.renrennet.utils.io.file.PropertiesRead;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
